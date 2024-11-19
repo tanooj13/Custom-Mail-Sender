@@ -30,7 +30,7 @@ sender_password = st.text_input("Sender Password", type="password", help="Enter 
 email_subject = st.text_input("Email Subject", "Hello {Name}!", help="Use placeholders like {Name}, {Company}, etc.")
 email_body_template = st.text_area(
     "Email Body Template",
-    "Dear {Name},\n\nWe are excited to connect with you from {Company}.\n\nBest regards,\n[Your Name]",
+    "Dear {Name},\n\nWe are excited to connect with you from {Company}.\n\nBest regards,\n{Company}",
     help="Use placeholders like {Name}, {Company}, etc."
 )
 
