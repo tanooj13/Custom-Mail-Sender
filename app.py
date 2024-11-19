@@ -7,10 +7,10 @@ from email_status_db import get_log_details
 start_scheduler()
 
 # Set the app title
-st.title("Custom Email Sender with Scheduler")
+st.title("Custom Email Sender")
 
 #  Upload CSV File
-st.header("Step 1: Upload Recipient Data")
+st.header("Upload Recipient Data")
 # Allow the user to upload a CSV file containing recipient details
 uploaded_file = st.file_uploader("Upload a CSV file containing recipient details (e.g., Name, Email, Company):", type=["csv"])
 
@@ -21,7 +21,7 @@ if uploaded_file:
     st.dataframe(data)
 
 # Email Configuration
-st.header("Step 2: Email Configuration")
+st.header("Email Configuration")
 # Input fields for sender email and password
 sender_email = st.text_input("Sender Email", help="Enter the email address from which emails will be sent.")
 sender_password = st.text_input("Sender Password", type="password", help="Enter the password for the sender email.")
@@ -35,7 +35,7 @@ email_body_template = st.text_area(
 )
 
 # Email Scheduling Options
-st.header("Step 3: Email Scheduling")
+st.header("Schedule your mails")
 # Input fields for scheduling date, time, and throttle rate (emails per minute)
 schedule_date = st.date_input("Schedule Date", help="Select the date to send the emails.")
 schedule_time = st.time_input("Schedule Time (24-hour format)", help="Select the exact time for sending emails.")
